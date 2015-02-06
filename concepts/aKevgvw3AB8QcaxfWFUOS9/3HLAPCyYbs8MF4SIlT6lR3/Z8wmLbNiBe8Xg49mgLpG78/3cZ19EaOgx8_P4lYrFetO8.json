@@ -1,0 +1,51 @@
+{
+  "uri" : "local://3cZ19EaOgx8_P4lYrFetO8/",
+  "name" : "RDF resources (Unit 9)",
+  "category" : ".video",
+  "parent" : "local://Z8wmLbNiBe8Xg49mgLpG78/",
+  "pname" : "Videos (Folder)",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "url",
+    "expr" : {
+      "str" : "//fast.wistia.net/embed/iframe/6wrdd2bd7g",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "title",
+    "expr" : {
+      "str" : "RDF resources (Unit 9)",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "description",
+    "expr" : {
+      "str" : "This video shows how you create an RDF representation for all programmer implementations. ",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "category",
+    "expr" : {
+      "str" : "course101",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "video",
+    "expr" : {
+      "concept" : "local://HO5xIpYI7SAogamO1ce-t2/",
+      "conceptName" : "VideoLambda",
+      "bindings" : {
+        "url" : "url",
+        "title" : "title",
+        "description" : "description",
+        "category" : "category"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "video"
+  } ],
+  "isLambda" : false,
+  "digest" : "H3ihKXsuzmy0V9venLYdAA=="
+}

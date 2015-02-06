@@ -1,0 +1,36 @@
+{
+  "uri" : "local://SPvbNoakTaB52qGMEEqjmE/",
+  "name" : "ConceptJS Video Gallery",
+  "category" : "",
+  "parent" : "local://3HLAPCyYbs8MF4SIlT6lR3/",
+  "pname" : "Video Gallery (Folder)",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "htmlTemplate",
+    "expr" : {
+      "str" : "<html>\n    <head>\n        <link rel=\"stylesheet\" href=\"/resourcelocal://2H4vQz2xfC8dv4mbO0-8aD/\">\n        \n        <script src=\"/resourcelocal://gxhbE-QufoBATq2zM0GOE9/\"></script>\n        <script src=\"js/jquery.dotdotdot.min.js\"></script>\n        \n        <meta name=\"cjsSaveMode\" content=\"auto\">\n        <meta name=\"cjsHeaderActive\" content=\"yes\">\n    </head>\n    \n    <body>\n        <div id=\"fb-root\"></div>\n        <script>(function(d, s, id) {\n            var js, fjs = d.getElementsByTagName(s)[0];\n            if (d.getElementById(id)) return;\n            js = d.createElement(s); js.id = id;\n            js.src = \"//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0\";\n            fjs.parentNode.insertBefore(js, fjs);\n            }(document, 'script', 'facebook-jssdk'));\n        </script>\n        \n        <script>\n            window.twttr = (function (d, s, id) {\n                var t, js, fjs = d.getElementsByTagName(s)[0];\n                if (d.getElementById(id)) return;\n                js = d.createElement(s); js.id = id;\n                js.src= \"https://platform.twitter.com/widgets.js\";\n                fjs.parentNode.insertBefore(js, fjs);\n                return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });\n            }(document, \"script\", \"twitter-wjs\"));\n        </script>\n        \n        <div id=\"videoGallery\" class=\"container\">\n            <div class=\"row title\">\n                <div class=\"col-sm-10 col-lg-10 col-md-10\">\n                    <h2>ConceptJS Video Gallery</h2>\n                    <p>WATCH IT. LEARN IT. LOVE IT!</p>\n                </div>\n                <div class=\"col-sm-2 col-lg-2 col-md-2 sociallinks\">\n                    <ul>\n                        <li>\n                            <div class=\"fb-like\" \n                                data-href=\"https://www.facebook.com/conceptjs\" \n                                data-layout=\"button\" \n                                data-action=\"like\" \n                                data-show-faces=\"false\" \n                                data-share=\"false\">\n                            </div>\n                        </li>\n                        <li>\n                            <a class=\"twitter-share-button cjs-twitter-button\" href=\"https://twitter.com/lambdazen\"\n                                data-url=\"https://www.conceptjs.com\" \n                                data-text=\"Check out ConceptJS to use, build and share web applications directly through the browser\"\n                                data-hashtags=\"conceptjs\"\n                                data-count=\"none\"\n                                data-lang=\"en\">\n                                Tweet\n                            </a>\n                        </li>\n                    </ul>\n                </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"video-gallery\">\n                    <div class=\"row search\">\n                        <div class=\"right-inner-addon \">\n                            <i refId=\"search\" class=\"fa fa-search fa-lg\" ></i>\n                            <input id=\"searchInput\" type=\"text\" class=\"form-control\" id=\"search\" placeholder=\"Search\" data-bind=\"textInput: refreshSearch\">\n                        </div>\n                    </div>\n                    <div class=\"row\">\n                        <div class=\"video-list col-md-3\">\n                            <div class=\"video-list-wrapper\" data-bind=\"foreach: videos\">\n                                <div class=\"row\">\n                                    <div class=\"overlay\" data-bind=\"click: playVideo\">\n                                        <div class=\"video-title\" data-bind=\"text: title\"></div>\n                                        <div class=\"video-desc\" data-bind=\"text: description\"></div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    \n                        <div class=\"video-player col-md-9\">\n                            <iframe id=\"player\" data-bind=\"attr: {src: url}\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"wistia_embed\" name=\"wistia_embed\" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width=\"854\" height=\"424\"></iframe>\n                        </div>\n                    </div>\n                    <div id=\"categoryList\" class=\"row\">\n                        <div class=\"col-md-1\">\n                            <h4>Categories:</h4>\n                        </div>\n                        <div class=\"col-md-11\">\n                            <ul>\n                                <li><a href=\"javascript:void(0)\" data-bind=\"click: categorySearch\" category=\"all\">All</a></li>\n                                <li><a href=\"javascript:void(0)\" data-bind=\"click: categorySearch\" category=\"course100\">Course 100</a></li>\n                                <li><a href=\"javascript:void(0)\" data-bind=\"click: categorySearch\" category=\"course101\">Course 101</a></li>\n                                <li><a href=\"javascript:void(0)\" data-bind=\"click: categorySearch\" category=\"shortTour\">Short Tour</a></li>\n                            </ul>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        \n        <script src=\"//fast.wistia.net/static/iframe-api-v1.js\"></script>\n    </body>\n</html>",
+      "strEditMode" : "html"
+    }
+  }, {
+    "name" : "_page_propertyMap",
+    "expr" : {
+      "script" : "return {}"
+    }
+  }, {
+    "name" : "page",
+    "expr" : {
+      "concept" : "/common/core/Xfh2VQ4HSK9klqbqqR-eBB/",
+      "conceptName" : "Mustache HTML Page",
+      "bindings" : {
+        "htmlTemplate" : "htmlTemplate",
+        "propertyMap" : "_page_propertyMap"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "page"
+  } ],
+  "isLambda" : false,
+  "digest" : "rFeTb+UHwXsJqrMj2kuJsw=="
+}

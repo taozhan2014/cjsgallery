@@ -1,0 +1,51 @@
+{
+  "uri" : "local://WzZQXcyfvv8-sKsa3tj8G5/",
+  "name" : "About-page/Wiki-page (Unit 6)",
+  "category" : ".video",
+  "parent" : "local://Z8wmLbNiBe8Xg49mgLpG78/",
+  "pname" : "Videos (Folder)",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "url",
+    "expr" : {
+      "str" : "//fast.wistia.net/embed/iframe/jvwkg5puw6",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "title",
+    "expr" : {
+      "str" : "About-page/Wiki-page (Unit 6)",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "description",
+    "expr" : {
+      "str" : "This video shows how you can create an about-page for Programmer v2 using the built-in Wiki Page concept. ",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "category",
+    "expr" : {
+      "str" : "course101",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "video",
+    "expr" : {
+      "concept" : "local://HO5xIpYI7SAogamO1ce-t2/",
+      "conceptName" : "VideoLambda",
+      "bindings" : {
+        "url" : "url",
+        "title" : "title",
+        "description" : "description",
+        "category" : "category"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "video"
+  } ],
+  "isLambda" : false,
+  "digest" : "+OWF9qvebRai5C/fUy672Q=="
+}

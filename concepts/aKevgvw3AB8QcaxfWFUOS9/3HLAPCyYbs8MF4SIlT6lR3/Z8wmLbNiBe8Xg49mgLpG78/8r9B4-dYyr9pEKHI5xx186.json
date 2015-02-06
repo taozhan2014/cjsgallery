@@ -1,0 +1,51 @@
+{
+  "uri" : "local://8r9B4-dYyr9pEKHI5xx186/",
+  "name" : "A lambda concept (Unit 4)",
+  "category" : ".video",
+  "parent" : "local://Z8wmLbNiBe8Xg49mgLpG78/",
+  "pname" : "Videos (Folder)",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "url",
+    "expr" : {
+      "str" : "//fast.wistia.net/embed/iframe/oewtnnwj6g",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "title",
+    "expr" : {
+      "str" : "A lambda concept (Unit 4)",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "description",
+    "expr" : {
+      "str" : "This video shows how you can create a lambda concept Programmer using the Editor. ",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "category",
+    "expr" : {
+      "str" : "course101",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "video",
+    "expr" : {
+      "concept" : "local://HO5xIpYI7SAogamO1ce-t2/",
+      "conceptName" : "VideoLambda",
+      "bindings" : {
+        "url" : "url",
+        "title" : "title",
+        "description" : "description",
+        "category" : "category"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "video"
+  } ],
+  "isLambda" : false,
+  "digest" : "2dmzCdBHG/AoVX/Y+qLLkQ=="
+}

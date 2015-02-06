@@ -1,0 +1,51 @@
+{
+  "uri" : "local://IuajbiqsTr9D8KXQ8Pev42/",
+  "name" : "Hello World, the copy-paste way (Unit 1.1)",
+  "category" : ".video",
+  "parent" : "local://Z8wmLbNiBe8Xg49mgLpG78/",
+  "pname" : "Videos (Folder)",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "url",
+    "expr" : {
+      "str" : "//fast.wistia.net/embed/iframe/palt87s0ha",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "title",
+    "expr" : {
+      "str" : "Hello World, the copy-paste way (Unit 1.1)",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "description",
+    "expr" : {
+      "str" : "This video shows how you can download a template to create a Hello World concept. ",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "category",
+    "expr" : {
+      "str" : "course100",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "video",
+    "expr" : {
+      "concept" : "local://HO5xIpYI7SAogamO1ce-t2/",
+      "conceptName" : "VideoLambda",
+      "bindings" : {
+        "url" : "url",
+        "title" : "title",
+        "description" : "description",
+        "category" : "category"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "video"
+  } ],
+  "isLambda" : false,
+  "digest" : "vePNV3lpyj6CNljFNkkHXA=="
+}

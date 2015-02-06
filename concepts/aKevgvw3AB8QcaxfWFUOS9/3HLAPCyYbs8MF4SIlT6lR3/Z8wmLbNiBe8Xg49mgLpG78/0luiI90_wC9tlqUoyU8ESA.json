@@ -1,0 +1,51 @@
+{
+  "uri" : "local://0luiI90_wC9tlqUoyU8ESA/",
+  "name" : "How \"Hello Jane Doe\" works (Unit 4.2)",
+  "category" : ".video",
+  "parent" : "local://Z8wmLbNiBe8Xg49mgLpG78/",
+  "pname" : "Videos (Folder)",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "url",
+    "expr" : {
+      "str" : "//fast.wistia.net/embed/iframe/h058y3382j",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "title",
+    "expr" : {
+      "str" : "How \"Hello Jane Doe\" works (Unit 4.2)",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "description",
+    "expr" : {
+      "str" : "This video shows how the dynamic HTML page created in the previous video works. ",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "category",
+    "expr" : {
+      "str" : "course100",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "video",
+    "expr" : {
+      "concept" : "local://HO5xIpYI7SAogamO1ce-t2/",
+      "conceptName" : "VideoLambda",
+      "bindings" : {
+        "url" : "url",
+        "title" : "title",
+        "description" : "description",
+        "category" : "category"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "video"
+  } ],
+  "isLambda" : false,
+  "digest" : "kkebSfciiFGhGAfm2O62TQ=="
+}

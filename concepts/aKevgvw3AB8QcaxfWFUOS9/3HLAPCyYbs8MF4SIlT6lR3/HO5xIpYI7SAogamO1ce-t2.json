@@ -1,0 +1,60 @@
+{
+  "uri" : "local://HO5xIpYI7SAogamO1ce-t2/",
+  "name" : "VideoLambda",
+  "category" : "",
+  "parent" : "local://3HLAPCyYbs8MF4SIlT6lR3/",
+  "pname" : "Video Gallery (Folder)",
+  "flags" : "U",
+  "lvars" : [ {
+    "name" : "url",
+    "type" : "/common/types/t6plZKh35i93o453wH2NX2/",
+    "typeName" : "string"
+  }, {
+    "name" : "title",
+    "type" : "/common/types/t6plZKh35i93o453wH2NX2/",
+    "typeName" : "string"
+  }, {
+    "name" : "description",
+    "type" : "/common/types/t6plZKh35i93o453wH2NX2/",
+    "typeName" : "string"
+  }, {
+    "name" : "category",
+    "type" : "/common/types/t6plZKh35i93o453wH2NX2/",
+    "typeName" : "string"
+  } ],
+  "vars" : [ {
+    "name" : "ConceptName",
+    "expr" : {
+      "concept" : "/common/core/qE-eyN-QBBBJuqiaFW-2l1/",
+      "conceptName" : "Named Concept",
+      "bindings" : {
+        "name" : "title"
+      }
+    }
+  }, {
+    "name" : "_indexEntry_type",
+    "expr" : {
+      "concept" : "local://ePqScOyIEy8Ci4q03XzVuC/",
+      "conceptName" : "Video Index Entry Type"
+    }
+  }, {
+    "name" : "indexEntry",
+    "expr" : {
+      "concept" : "/common/core/0mSE4ISzLM8fkKj3BVBy7A/",
+      "conceptName" : "Lucene Index Entry",
+      "bindings" : {
+        "type" : "_indexEntry_type"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "ConceptName"
+  }, {
+    "var" : "indexEntry"
+  }, {
+    "concept" : "local://8TAkFOSW9B9tJqEFIQusN6/",
+    "conceptName" : "Video View"
+  } ],
+  "isLambda" : true,
+  "digest" : "SD6fzoBkH0jyXkoLcdWcvw=="
+}

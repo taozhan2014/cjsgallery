@@ -1,0 +1,19 @@
+{
+  "uri" : "local://aKevgvw3AB8QcaxfWFUOS9/",
+  "name" : "gallery",
+  "category" : "",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "view",
+    "expr" : {
+      "concept" : "local://9RabA9-VMWBiNaSeB59w5A/",
+      "conceptName" : "Default Gallery View"
+    }
+  } ],
+  "isas" : [ {
+    "var" : "view"
+  } ],
+  "isLambda" : false,
+  "digest" : "Uq8NoQD2FyNnj7VUcQkZjg=="
+}

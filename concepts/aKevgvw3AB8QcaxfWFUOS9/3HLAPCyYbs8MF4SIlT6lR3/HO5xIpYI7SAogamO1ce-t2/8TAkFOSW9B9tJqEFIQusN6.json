@@ -1,0 +1,40 @@
+{
+  "uri" : "local://8TAkFOSW9B9tJqEFIQusN6/",
+  "name" : "Video View",
+  "category" : "",
+  "parent" : "local://HO5xIpYI7SAogamO1ce-t2/",
+  "pname" : "VideoLambda",
+  "flags" : "U",
+  "lvars" : [ {
+    "name" : "model",
+    "type" : "local://HO5xIpYI7SAogamO1ce-t2/",
+    "typeName" : "VideoLambda"
+  } ],
+  "vars" : [ {
+    "name" : "htmlTemplate",
+    "expr" : {
+      "str" : "COMING SOON.",
+      "strEditMode" : "html"
+    }
+  }, {
+    "name" : "_page_propertyMap",
+    "expr" : {
+      "script" : "return {};"
+    }
+  }, {
+    "name" : "page",
+    "expr" : {
+      "concept" : "/common/core/Xfh2VQ4HSK9klqbqqR-eBB/",
+      "conceptName" : "Mustache HTML Page",
+      "bindings" : {
+        "htmlTemplate" : "htmlTemplate",
+        "propertyMap" : "_page_propertyMap"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "page"
+  } ],
+  "isLambda" : true,
+  "digest" : "556H1668ifF2h5crKcVWjA=="
+}

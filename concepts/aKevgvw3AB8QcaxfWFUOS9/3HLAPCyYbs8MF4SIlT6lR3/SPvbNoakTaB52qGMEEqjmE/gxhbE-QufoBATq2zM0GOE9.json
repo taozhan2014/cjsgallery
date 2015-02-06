@@ -1,0 +1,37 @@
+{
+  "uri" : "local://gxhbE-QufoBATq2zM0GOE9/",
+  "name" : "video.js",
+  "category" : "js",
+  "parent" : "local://SPvbNoakTaB52qGMEEqjmE/",
+  "pname" : "ConceptJS Video Gallery",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "jsContent",
+    "expr" : {
+      "str" : "var videoGalleryVM;\nvar wistiaEmbed;\n\nvar urlComp = purl(document.referrer);\nvar searchUri = urlComp.param('uri');\n\nfunction ItemVM(searchResult){\n    var self = this;\n    this.searchResult = searchResult;\n    \n    this.url = ko.observable(searchResult._source.url);\n    this.title = ko.observable(searchResult._source.title);\n    this.description = ko.observable(searchResult._source.description);\n    \n    this.playVideo = function(data, event){\n        if (wistiaEmbed){\n            wistiaEmbed.pause();\n        }\n        videoGalleryVM.url(data.url());\n        setTimeout(function(){ \n            wistiaEmbed = jQuery(\"#player\")[0].wistiaApi;\n            wistiaEmbed.play();\n        }, 1000);\n        \n        $(\".video-list-wrapper .overlay\").removeClass(\"active\");\n        $(event.currentTarget).addClass(\"active\");\n    }\n}\n\nfunction VideoGalleryVM(){\n    var self = this;\n    \n    var sortJson = [{\"field\" : \"category\", \"order\" : \"ASC\"}, {\"field\" : \"title\", \"order\" : \"ASC\"}];\n    var categorySearchJson;\n    var searchJson = {\n        \"match_all\": { }\n    };\n    \n    this.videos = ko.observableArray();\n    \n    this.url = ko.observable();\n    this.urlWithFoam = ko.computed(function() { return this.url() + \"?videoFoam=true\"; }, this);\n    this.title = ko.observable();\n    \n    this.refreshSearch = ko.pureComputed({\n        read: function(){\n            return \"\";\n        },\n        write: function(data){\n            if (data){\n                searchJson = {\n                    \"query_string\": { \n                        \"query\" : data\n                    }\n                };\n            }else{\n                searchJson = {\n                    \"match_all\": { }\n                };\n            }\n            self.refresh(searchJson, sortJson);\n        },\n        owner: this\n    });\n    \n    this.refresh = function(searchJson, sortJson){\n        var processSearchJson;\n        if (searchUri){\n            //console.log(\"search uri:\"+searchUri)\n            processSearchJson = {\n                \"term\" : {\n                    \"uri\" : searchUri\n                }\n            }\n            searchUri = null;\n        }else{\n            var searchArray = [];\n            if (categorySearchJson){\n                searchArray.push(categorySearchJson);\n            }\n            searchArray.push(searchJson);\n        \n            processSearchJson = {\n                \"bool\" : {\n                    \"must\" : searchArray\n                }\n            }\n        }\n        //console.log(\"search json:\"+JSON.stringify(processSearchJson));\n        $cjs.search({\n            uri: \"local://ePqScOyIEy8Ci4q03XzVuC/\",\n            queryJson: processSearchJson,\n            sortJson: sortJson,\n            done : function(data){\n                //console.log(\"search data:\"+JSON.stringify(data));\n                self.videos.removeAll();\n                if (data.hits.total > 0){ \n                    var firstEntry = true;\n                    _.each(data.hits.hits, function(x){\n                        var newItem = new ItemVM(x);\n                        self.videos.push(newItem);\n                        if (firstEntry){\n                            self.url(newItem.url());\n                            self.title(newItem.title());\n                            firstEntry = false;\n                        }\n                    });\n                    \n                    $(\"div.video-desc\").dotdotdot();\n                }\n            },\n            fail : function(jqXHR, textStatus, errorThrown){\n                console.log(\"failed to search video, response:\"+jqXHR.responseText);\n            }\n        });\n    }\n    \n    this.categorySearch = function(data, event){\n        var category = $(event.currentTarget).attr(\"category\");\n        \n        if (category == \"all\"){\n            categorySearchJson = null;\n            $(\"#searchInput\").attr(\"placeholder\", \"Search\");\n        }else{\n            categorySearchJson = {\n                \"term\" : {\n                    \"category\" : category\n                }\n            }\n            $(\"#searchInput\").attr(\"placeholder\", \"Search in category \" + category);\n        }\n        \n        self.refresh(searchJson, sortJson);\n    }\n    \n    this.refresh(searchJson, sortJson);\n}\n\n$(function(){\n    videoGalleryVM = new VideoGalleryVM(); \n    ko.applyBindings(videoGalleryVM, document.getElementById('videoGallery'));  \n})",
+      "strEditMode" : "js"
+    }
+  }, {
+    "name" : "_javascriptResource_fileName",
+    "expr" : {
+      "str" : "video.js",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "javascriptResource",
+    "expr" : {
+      "concept" : "/common/core/nK_9eZMUDp8T6qqr7t5k67/",
+      "conceptName" : "Javascript Resource",
+      "bindings" : {
+        "js" : "jsContent",
+        "fileName" : "_javascriptResource_fileName"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "javascriptResource"
+  } ],
+  "isLambda" : false,
+  "digest" : "cijqIsIUzc6cNITNkIQSFg=="
+}

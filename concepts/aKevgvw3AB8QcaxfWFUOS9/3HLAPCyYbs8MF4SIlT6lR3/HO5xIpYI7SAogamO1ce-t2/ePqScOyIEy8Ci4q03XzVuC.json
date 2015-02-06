@@ -1,0 +1,37 @@
+{
+  "uri" : "local://ePqScOyIEy8Ci4q03XzVuC/",
+  "name" : "Video Index Entry Type",
+  "category" : "",
+  "parent" : "local://HO5xIpYI7SAogamO1ce-t2/",
+  "pname" : "VideoLambda",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "_indexEntryType_indexUri",
+    "expr" : {
+      "str" : "local://HO5xIpYI7SAogamO1ce-t2/",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "_indexEntryType_fieldTypes",
+    "expr" : {
+      "str" : "{ \"uri\" : { \"type\" : \"string\", \"index\" : \"not_analyzed\" },\n   \"url\" : { \"type\" : \"string\", \"index\" : \"not_analyzed\" },\n  \"title\" : { \"type\" : \"string\" },\n  \"description\" : { \"type\" : \"string\" },\n  \"category\" : { \"type\" : \"string\", \"index\" : \"not_analyzed\" } }",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "indexEntryType",
+    "expr" : {
+      "concept" : "/common/core/2ZCZ-kBJFDAkW4sQSVsBs8/",
+      "conceptName" : "Lucene Index Entry Type",
+      "bindings" : {
+        "indexUri" : "_indexEntryType_indexUri",
+        "fieldTypes" : "_indexEntryType_fieldTypes"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "indexEntryType"
+  } ],
+  "isLambda" : false,
+  "digest" : "LVY+SJd8fCJcWTGMmNGpDA=="
+}
